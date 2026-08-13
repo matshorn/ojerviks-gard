@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const gallery = [
+	"001_DSC_6138-HDR.webp",
+	"002_DSC_6164-HDR.webp",
+	"003_46-181010_O_jerviks_Ga_rd_.webp",
+	"004_34-181010_O_jerviks_Ga_rd_.webp",
+	"005_41-181010_O_jerviks_Ga_rd_.webp",
+	"006_42-181010_O_jerviks_Ga_rd_.webp",
+	"007_44-181010_O_jerviks_Ga_rd_.webp",
+	"008_45-181010_O_jerviks_Ga_rd_h.webp",
+	"009_PHM_2286_7_8_tonemapped_A.webp",
+	"012_116-181010_O_jerviks_Ga_rd_0867h.webp",
+	"013_135-181010__jerviks_G_rd_0903.webp",
+	"014_53-181010__jerviks_G_rd___1_.webp",
+	"015_DSC_0620.webp",
+	"016_DSC_4940.webp",
+	"018_123-181010__jerviks_G_rd_0882.webp",
+	"019_DJI_0194.webp",
+	"020_DJI_0173.webp",
+	"023_DJI_0166.webp",
+	"024_from_the_lake.webp",
+	"025_DSC_6187-HDR.webp",
+	"026_DSC_6109.webp",
+	"028_DSC_5853.webp",
+	"029_DJI_0178.webp",
+	"033_DSC_6111.webp",
+	"034_DJI_0187.webp",
+	"037_DJI_0159.webp",
+	"039_DSC_5868.webp",
+	"040_DSC_6204-HDR.webp",
+	"041_DSC_6169.webp",
+	"045_DSC_6244-HDR.webp",
+	"048_DSC_6146-HDR.webp",
+	"049_DSC_6029.webp",
+];
+---
+
+<Layout title="Farm" description="The farm rests on two kilometers of uninhabited coastline along lake Fryken.">
+	<div class="page-header">
+		<h1>The Farm</h1>
+		<p>
+			The farm rests on two kilometers of uninhabited coastline along lake Fryken and commands
+			spectacular views of pastureland, the lake, and oxygen-rich forests, just south of Sunne.
+		</p>
+	</div>
+
+	<section>
+		<h2>Where to stay</h2>
+		<div class="cards">
+			<div class="card">
+				<img src="/images/011_image-asset.webp" alt="The Farmhouse exterior" />
+				<h3>Farmhouse</h3>
+				<p>Staff provide attentive service while maintaining your privacy — meal catering, transportation, and guidance on foraging. A Welcome Book covers everything else.</p>
+			</div>
+			<div class="card">
+				<img src="/images/030_Living_room.webp" alt="The Old Wing living room" />
+				<h3>The Old Wing</h3>
+				<p>100 meters from the main house, for couples or small families. Full kitchen, wood and leather furnishings seating eight, antiques, and an integrated audio system.</p>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h2>Amenities</h2>
+		<ul class="amenities">
+			<li>Fully equipped kitchen (Moccamaster, Mikasa, Le Creuset)</li>
+			<li>Fireplace</li>
+			<li>Premium beds</li>
+			<li>Sauna with indoor cold bath</li>
+			<li>Gym — yoga mats, dumbbells</li>
+			<li>WiFi throughout</li>
+			<li>Jacuzzi</li>
+			<li>Mini-bar</li>
+		</ul>
+		<div class="gallery wide">
+			<img src="/images/027_ko_k1.webp" alt="Kitchen" />
+			<img src="/images/043_ko_k2.webp" alt="Kitchen detail" />
+			<img src="/images/031_dining_area.webp" alt="Dining area" />
+			<img src="/images/046_jacuzzi.webp" alt="Jacuzzi" />
+			<img src="/images/047_Office.webp" alt="Office" />
+		</div>
+	</section>
+
+	<section>
+		<h2>Floor plans</h2>
+		<div class="floorplans">
+			<img src="/images/038_Ground_Floor.webp" alt="Ground floor plan" />
+			<img src="/images/035_Upper_Floor.webp" alt="Upper floor plan" />
+		</div>
+	</section>
+
+	<section>
+		<h2>Gallery</h2>
+		<div class="gallery">
+			{gallery.map((src) => (
+				<img src={`/images/${src}`} alt="Öjerviks gård" loading="lazy" />
+			))}
+		</div>
+	</section>
+
+	<section>
+		<a class="cta" href="https://airbnb.com/h/ojervikfarmhouse" target="_blank" rel="noopener">Book on Airbnb</a>
+	</section>
+</Layout>

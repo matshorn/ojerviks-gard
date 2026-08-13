@@ -1,0 +1,487 @@
+@import "@fontsource/fraunces/500.css";
+@import "@fontsource/fraunces/600.css";
+@import "@fontsource/fraunces/500-italic.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+:root {
+	--paper: #ede9df;
+	--paper-raised: #f6f3ea;
+	--ink: #16221f;
+	--falu: #8c2f1c;
+	--dusk: #d98c74;
+	--moss: #5b6b4f;
+	--border: #c9c2ae;
+	--muted: #5c5a4e;
+
+	--font-display: "Fraunces", Georgia, serif;
+	--font-body: "Inter", -apple-system, sans-serif;
+	--font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--font-body);
+	line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+a {
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-display);
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+.meta,
+time,
+.entry-meta {
+	font-family: var(--font-mono);
+}
+
+.site-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+	flex-wrap: wrap;
+	gap: 1rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.site-header .logo img {
+	width: 160px;
+	height: auto;
+}
+
+.site-header nav {
+	display: flex;
+	gap: clamp(1rem, 3vw, 2.5rem);
+	font-family: var(--font-mono);
+	font-size: 0.82rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	align-items: center;
+}
+
+.site-header nav a {
+	text-decoration: none;
+	padding-bottom: 0.2rem;
+	border-bottom: 1px solid transparent;
+}
+
+.site-header nav a:hover {
+	border-bottom-color: var(--falu);
+}
+
+.site-header nav a.book {
+	background: var(--falu);
+	color: var(--paper-raised);
+	padding: 0.5rem 1.1rem;
+	border-radius: 1px;
+}
+
+.site-header nav a.book:hover {
+	border-bottom-color: transparent;
+	opacity: 0.9;
+}
+
+main {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 clamp(1.5rem, 5vw, 4rem) 4rem;
+}
+
+.hero {
+	position: relative;
+	margin: 0 calc(-1 * clamp(1.5rem, 5vw, 4rem)) 3rem;
+}
+
+.hero img {
+	width: 100%;
+	height: min(70vh, 620px);
+	object-fit: cover;
+	filter: saturate(0.92) contrast(1.03);
+}
+
+.hero-caption {
+	position: absolute;
+	bottom: 2rem;
+	left: clamp(1.5rem, 5vw, 4rem);
+	color: #fff;
+	text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+	max-width: 32rem;
+}
+
+.hero-caption h1 {
+	font-size: clamp(2rem, 4vw, 3.4rem);
+	margin: 0 0 0.5rem;
+	font-weight: 600;
+}
+
+.page-header {
+	margin: 3rem 0 2rem;
+}
+
+.page-header h1 {
+	font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+	margin: 0 0 0.5rem;
+}
+
+.page-header p {
+	color: var(--muted);
+	max-width: 42rem;
+	font-size: 1.1rem;
+}
+
+.lede {
+	font-size: 1.2rem;
+	max-width: 42rem;
+	margin-bottom: 3rem;
+}
+
+section + section {
+	margin-top: 3rem;
+	padding-top: 3rem;
+	border-top: 1px solid var(--border);
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 2rem;
+}
+
+.card h3 {
+	margin: 1rem 0 0.4rem;
+}
+
+.card img {
+	border-radius: 2px;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 0.75rem;
+	margin: 2rem 0;
+}
+
+.gallery img {
+	border-radius: 2px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	width: 100%;
+}
+
+.gallery.wide img {
+	aspect-ratio: 4 / 3;
+}
+
+.amenities {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 0.5rem 2rem;
+	list-style: none;
+	padding: 0;
+	margin: 1.5rem 0;
+	font-family: var(--font-mono);
+	font-size: 0.92rem;
+}
+
+.amenities li {
+	padding: 0.4rem 0;
+	border-bottom: 1px solid var(--border);
+}
+
+.floorplans {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.floorplans img {
+	background: var(--paper-raised);
+	border: 1px solid var(--border);
+	padding: 1rem;
+	object-fit: contain;
+}
+
+.cta {
+	display: inline-block;
+	margin-top: 1rem;
+	background: var(--falu);
+	color: var(--paper-raised);
+	text-decoration: none;
+	padding: 0.7rem 1.6rem;
+	border-radius: 1px;
+	font-size: 0.95rem;
+	font-family: var(--font-mono);
+}
+
+.site-footer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem 3rem;
+	justify-content: space-between;
+	padding: 3rem clamp(1.5rem, 5vw, 4rem);
+	border-top: 1px solid var(--border);
+	color: var(--muted);
+	font-size: 0.9rem;
+	font-family: var(--font-mono);
+}
+
+.footer-links {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.footer-links a {
+	text-decoration: underline;
+}
+
+.prose p {
+	margin: 0 0 1.4rem;
+	max-width: 42rem;
+}
+
+.prose h2 {
+	margin-top: 3rem;
+}
+
+.poem {
+	max-width: 30rem;
+	margin: 2rem 0 2.5rem;
+	padding-left: 1.5rem;
+	border-left: 3px solid var(--falu);
+	font-family: var(--font-display);
+	font-style: italic;
+	color: var(--muted);
+}
+
+.poem p {
+	margin: 0 0 1rem;
+}
+
+.poem cite {
+	display: block;
+	font-family: var(--font-mono);
+	font-style: normal;
+	font-size: 0.85rem;
+	margin-top: 0.5rem;
+}
+
+.section-image {
+	margin: 3rem 0;
+}
+
+.section-image img {
+	border-radius: 2px;
+	width: 100%;
+	object-fit: cover;
+	max-height: 520px;
+}
+
+.section-image.pair {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1rem;
+}
+
+.section-image.pair img {
+	max-height: 420px;
+}
+
+.caption {
+	color: var(--muted);
+	font-family: var(--font-mono);
+	font-size: 0.8rem;
+	margin-top: 0.5rem;
+}
+
+.signature {
+	margin-top: 3rem;
+	font-family: var(--font-display);
+	font-style: italic;
+	color: var(--muted);
+}
+
+/* --- Marginalia timeline: the signature element --- */
+
+.ledger {
+	display: grid;
+	grid-template-columns: 7rem 1fr;
+	gap: 0;
+	margin: 0 0 2.5rem;
+}
+
+.page-header + .ledger {
+	margin-top: 0;
+}
+
+.ledger-entry {
+	display: contents;
+}
+
+.ledger-year {
+	font-family: var(--font-mono);
+	font-size: 0.85rem;
+	color: var(--falu);
+	padding: 0.9rem 1rem 0.9rem 0;
+	text-align: right;
+	border-right: 1px solid var(--border);
+	white-space: nowrap;
+	opacity: 0;
+	transform: translateY(6px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.ledger-note {
+	padding: 0.9rem 0 0.9rem 1.2rem;
+	font-size: 0.95rem;
+	border-bottom: 1px solid var(--border);
+	opacity: 0;
+	transform: translateY(6px);
+	transition: opacity 0.5s ease 0.08s, transform 0.5s ease 0.08s;
+}
+
+.ledger-year.is-visible,
+.ledger-note.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+.ledger-note strong {
+	font-family: var(--font-display);
+	font-weight: 600;
+}
+
+/* --- Activities guide: breadcrumb, fact card, entry list --- */
+
+.breadcrumb {
+	font-family: var(--font-mono);
+	font-size: 0.8rem;
+	color: var(--muted);
+	margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+	color: var(--falu);
+	text-decoration: none;
+}
+
+.breadcrumb a:hover {
+	text-decoration: underline;
+}
+
+.factcard {
+	float: right;
+	width: 260px;
+	margin: 0 0 1.5rem 2rem;
+	border: 1px solid var(--border);
+	background: var(--paper);
+	font-size: 0.85rem;
+}
+
+.factcard-title {
+	background: var(--moss);
+	color: var(--paper-raised);
+	font-family: var(--font-display);
+	font-weight: 600;
+	text-align: center;
+	padding: 0.6rem 0.5rem;
+	font-size: 1.05rem;
+}
+
+.factcard img {
+	width: 100%;
+}
+
+.factcard table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.factcard td,
+.factcard th {
+	padding: 0.5rem 0.7rem;
+	vertical-align: top;
+	border-top: 1px solid var(--border);
+	text-align: left;
+}
+
+.factcard th {
+	font-family: var(--font-mono);
+	color: var(--muted);
+	font-weight: normal;
+	font-size: 0.72rem;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	white-space: nowrap;
+}
+
+.entry-list {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0;
+}
+
+.entry-list li {
+	padding: 0.8rem 0;
+	border-bottom: 1px solid var(--border);
+}
+
+.entry-list .entry-title {
+	font-weight: 600;
+}
+
+.entry-list p {
+	margin: 0.3rem 0 0;
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+.entry-meta {
+	display: inline-block;
+	color: var(--falu);
+	font-size: 0.72rem;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	border: 1px solid var(--falu);
+	border-radius: 999px;
+	padding: 0.1rem 0.6rem;
+	margin-left: 0.5rem;
+}

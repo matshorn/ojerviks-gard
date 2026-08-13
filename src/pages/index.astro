@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Ledger from "../components/Ledger.astro";
+
+const entries = [
+	{ year: "1750–550 BCE", note: "Bronze Age burial mounds — the earliest trace of anyone living here." },
+	{ year: "1457", note: "Öjervik's earliest written record." },
+	{ year: "1824", note: "The old manor burns. Locals still say they've seen its ghost, <em>\"Frua.\"</em>" },
+	{ year: "1917", note: "Edward Montgomery buys Öjervik to become a farmer." },
+	{ year: "1943", note: "Montgomery sells to Svante Påhlson, who gives it to his daughter Ebba." },
+	{ year: "1947", note: "Ebba's manor house burns during a renovation." },
+	{ year: "1969", note: "Ebba and Claes build the house that still stands today." },
+	{ year: "1997", note: "Pål Horn buys the farm from his siblings." },
+	{ year: "2020", note: "<strong>Mats Horn</strong> takes it on — currently lives here." },
+];
+---
+
+<Layout title="Home">
+	<div class="hero">
+		<img src="/images/019_DJI_0194.webp" alt="Aerial view of Öjerviks gård and Lake Fryken" />
+		<div class="hero-caption">
+			<h1>A hidden treasure in Värmland</h1>
+			<p>At the foothills of the Scandinavian mountains, with breathtaking scenery, comfy living, and energising activities.</p>
+		</div>
+	</div>
+
+	<p class="lede">
+		Whether you're planning a family gathering, a milestone celebration, or an incentive trip,
+		Öjerviks gård offers award winning facilities designed to create memorable experiences —
+		two kilometers of uninhabited coastline along Lake Fryken, pastureland, and oxygen-rich forests,
+		just south of Sunne.
+	</p>
+
+	<section>
+		<p class="meta" style="color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem;">700 years, in the margin</p>
+		<Ledger entries={entries} />
+	</section>
+
+	<section class="cards">
+		<a class="card" href="/farm">
+			<img src="/images/044_Screenshot_2021-01-27_at_23.12.11.webp" alt="Öjerviks gård farmhouse" />
+			<h3>The Farm</h3>
+			<p>The Farmhouse and the Old Wing, right on the water.</p>
+		</a>
+		<a class="card" href="/activities">
+			<img src="/images/021_IMG_20210925_174531.webp" alt="Activities at Öjerviks gård" />
+			<h3>Activities</h3>
+			<p>You simply can't get bored — on the farm or in nearby Sunne.</p>
+		</a>
+		<a class="card" href="/celebrate">
+			<img src="/images/017_518d55fe-82c7-498f-9d8b-a20a7000d119_5ba79dfe9606ee670968a87b.webp" alt="A celebration dinner" />
+			<h3>Celebrate</h3>
+			<p>Meetings, family celebrations, and weddings.</p>
+		</a>
+		<a class="card" href="/history">
+			<img src="/images/022_191219228_8e130452-2ba4-4ad0-9ca4-a2f921a80b4b__1_.webp" alt="Historical photo of Öjervik" />
+			<h3>History</h3>
+			<p>Written about since 1457, with Viking graves and Nobel-laureate roots.</p>
+		</a>
+	</section>
+
+	<section>
+		<a class="cta" href="https://airbnb.com/h/ojervikfarmhouse" target="_blank" rel="noopener">Book on Airbnb</a>
+	</section>
+</Layout>

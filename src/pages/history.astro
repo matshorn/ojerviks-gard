@@ -1,0 +1,285 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Ledger from "../components/Ledger.astro";
+
+const entries = [
+	{ year: "1750–550 BCE", note: "Bronze Age burial mounds on the property." },
+	{ year: "1457", note: "Öjervik's earliest written record." },
+	{ year: "1786", note: "Judge Jan Sandelin and his wife Gustafva Christina move to Öjervik." },
+	{ year: "1814", note: "Antonsson wills his estate to Gustafva Christina — the story Lagerlöf later retold." },
+	{ year: "1824", note: "Jan Sandelin dies — Gustafva Christina stays locked in her room anyway." },
+	{ year: "1842", note: "Gustafva Christina dies, after 28 years in the north wing." },
+	{ year: "1844", note: "The manor house burns to the ground." },
+	{ year: "1917", note: "Edward Montgomery buys Öjervik to become a farmer." },
+	{ year: "1943", note: "Montgomery sells to Svante Påhlson, who gives it to his daughter Ebba." },
+	{ year: "1947", note: "Ebba's manor house burns during a renovation." },
+	{ year: "1969", note: "Ebba and Claes build the house that still stands today." },
+	{ year: "1997", note: "Pål Horn buys the farm from his siblings." },
+	{ year: "2020", note: "<strong>Mats Horn</strong> takes it on — currently lives here." },
+];
+---
+
+<Layout
+	title="History"
+	description="A brief history about Öjerviks gård, a family farm in Värmland written about since the 15th century."
+>
+	<div class="page-header">
+		<h1>Öijerwiks gård</h1>
+		<p>A brief history about Öjerviks gård</p>
+	</div>
+
+	<Ledger entries={entries} />
+
+	<div class="section-image">
+		<img src="/images/history/painting_lake_view.jpg" alt="Painting of the view over Lake Fryken from the farm" />
+		<p class="caption">Erling Ärlingsson — Fryksdalen</p>
+	</div>
+
+	<div class="prose">
+		<h2>A Family Farm</h2>
+
+		<p>
+			My father always recited the same poem when we crossed the border to Värmland, on our
+			annual trip to Öjervik, the family farm. During the rest of the year we lived in Memphis,
+			Tennessee, and every summer we came back to Sweden to be with friends and family and to
+			nourish our roots. The summer vacation from school wasn't complete until we had spent some
+			time at the farm. The poem roughly translates to:
+		</p>
+
+		<div class="poem">
+			<p>
+				And here is the grove, where the cuckoo calls,<br />
+				little ladies ran here,<br />
+				with bare feet and broken skirts,<br />
+				to pick the grove's berries,<br />
+				and here there was shade, and here there was sun,<br />
+				and here there was plenty of purple blossom,<br />
+				that grove is dear to me,<br />
+				my childhood whispers there.
+			</p>
+			<p>and in Swedish:</p>
+			<p>
+				Och här är dungen, där göken gol,<br />
+				små töser sprungo här<br />
+				med bara fötter och trasig kjol<br />
+				att plocka dungens bär,<br />
+				och här var det skugga och här var sol<br />
+				och här var det gott om nattviol,<br />
+				den dungen är mig kär,<br />
+				min barndom susar där.
+			</p>
+			<cite>By Gustaf Fröding, from the collection of poems "Stänk och flikar," 1896. Part II in "Strövtåg i hembygden."</cite>
+		</div>
+
+		<p>
+			My father grew up in Sunne because his family owned and managed the local mill "Rottneros
+			bruk," a group of companies involved in wood, pulp and energy businesses. The mill came
+			into the family in 1875, when Edsvallabolaget bought the bankruptcy estate after Gustaf
+			Adolf Wall (a local hero, despite his ultimate bankruptcy). Shortly after the acquisition,
+			one of the major shareholders in Edsvallabolaget gave the mill to his daughter Ebba Waern
+			and son-in-law, Hampus Edvard Montgomery. H.E. Montgomery was gregarious and involved in
+			many activities. Perhaps too many. In 1910, he suddenly died of a heart attack at the age
+			of 52, and the mill was burdened with debt as a result of Montgomery's aggressive
+			investment activities. The bank was inclined to liquidate the mill, save what it could of
+			its debt, and sell all the land — until Svante Påhlson came to the table.
+		</p>
+
+		<p>
+			Montgomery had 11 children, and the youngest of them, Greta, was married to Svante
+			Påhlson, a man with a resolute will to make the mill profitable. For Påhlson's plan to
+			work he not only had to convince the bank he was suitable for the job, but he also had to
+			compensate Greta's 10 siblings who also were interested in taking over the mill.
+			Ultimately, in 1917, after many uncertain years, the bank supported Påhlson. As
+			compensation Påhlson gave the remaining Montgomery siblings family homes in Sunne, which
+			to this day many "Montgomerys" inhabit.
+		</p>
+
+		<p>
+			Many books have been written about what happens next, of how Påhlson built one of
+			Europe's largest wood pulp and energy businesses. In 1917, when Påhlson took over the
+			business, it was an agriculture parts factory and only a small part of it was dedicated to
+			wood pulp production. 50 years later, in 1970, the Rottneros Group had become the largest
+			exporter of wood pulp in Europe. Rottneros is an old mill with a history that stretches
+			back as far as that of Öjervik. Påhlson himself, like Montgomery and G.A. Wall all lived at
+			the manor house at Rottneros. Probably not a bad place to live as multiple sources from
+			the 18th century cite Rottneros as the most beautiful estate in Värmland. At the end of
+			his life, Påhlson embellished the grounds surrounding the Manor house with a collection of
+			mostly Nordic sculptures, which became what is known today as Rottneros Park, a popular
+			tourist attraction in Värmland. A family trust owns the park and statues and Sunne county
+			operates the park during the summer.
+		</p>
+
+		<p>
+			Both Öjervik and Rottneros have almost always had a single owner throughout its recorded
+			history (roughly 700 years). They are just a few kilometers apart and are topographically
+			similar. That changed in 1917 when Påhlson bought Rottneros, and Greta's brother Edward
+			Montgomery bought Öjerviks gård. Edward Montgomery wanted to become a farmer and Öjervik
+			was his calling. When it was time for Edward to retire, in 1943, he decided to sell Öjervik
+			to Påhlson. This was a difficult time for Påhlson: he had recently lost his eldest and only
+			son, Pål, in World War II (Pål was a volunteer in Finland where he fought against the
+			Soviets and in Norway where he fought against the Nazis — ultimately a German sniper
+			killed him); Påhlson had financial troubles due to the poor business environment brought
+			about by the war; and lastly Påhlson's daughter, Ebba, was considering divorcing her
+			husband and father to her three children. It was for this last reason, to make Ebba's
+			potential divorce decision free of financial considerations, that Påhlson gave her Öjervik
+			in 1943.
+		</p>
+
+		<div class="section-image pair">
+			<div>
+				<img src="/images/history/manor_house_pre_1947_fire.png" alt="The original Öjervik manor house, before the 1947 fire" />
+				<p class="caption">The manor house given to Ebba in 1943 — lost to fire in 1947.</p>
+			</div>
+			<div>
+				<img src="/images/history/aerial_flygfoto_historic.png" alt="Historic aerial photo of the Öjervik farm buildings" />
+				<p class="caption">An early aerial photograph ("Flygfoto") of the farm.</p>
+			</div>
+		</div>
+
+		<p>
+			The manor house pictured above was the house that Ebba was given in 1943. Unfortunately,
+			during a large renovation in 1947, it succumbed to fire. The old manor house reflects many
+			architectural details that are typical for the region around Fryksdalen (the 1 ½ story
+			height, the non-center entry door, the semi-circle windows, wood panel facade, and shale
+			roofing). In 1969, Ebba and her husband Claes (whom she decided to hang on to) built the
+			house that stands today, a modern house typical for the time in which it was built. After
+			Ebba's and Claes' passings, the farm went to the next generation, and in 1997, Pål Horn,
+			Ebba's oldest son, bought it from his siblings while continuing his business affairs in
+			the USA. Pål passed away in 2018, and his wife Margareta decided it was better for the
+			next generation to take over. In 2020, the youngest of four siblings, Mats Horn (yours
+			truly) bought the farm from his siblings, and currently lives at Öjervik.
+		</p>
+	</div>
+
+	<div class="section-image">
+		<img src="/images/history/painting_lakeside_trees.jpg" alt="Painting of the lakeside shore near the farm" />
+		<p class="caption">Erling Ärlingsson — Fryksdalen</p>
+	</div>
+
+	<div class="prose">
+		<h2>Öjervik in Swedish Literature</h2>
+
+		<p>
+			Between 1880 and 1892, Bengt Fröding, Nobel Prize nominee Gustaf Fröding's uncle, rented
+			Öjervik. G. Fröding, born in 1860, spent his summers at Öjervik, and perhaps it's Öjervik
+			he refers to in my father's favorite poem. He's written other poems specifically about
+			Öjervik ("Svampinjoner"), and it was at Öjervik that Fröding became life-long enemies with
+			Selma Lagerlöf, another Sunne native and Nobel prize laureate. In their last correspondence
+			Lagerlöf informs Fröding that his letter wasn't worth more than toilet paper.
+		</p>
+
+		<p>
+			The Fryksdalen region is usually the setting for Lagerlöf's stories, and some are clearly
+			derived from events that took place at Öjervik. In Lagerlöf's debut novel, "Gösta Berlings
+			saga," she writes about a series of quasi-magical events at Rottneros ("Ekeby"), Öjervik
+			("Sjö"), and a few other farms in the Fryksdalen area. The main characters in the novel are
+			a military Major, his wife, and Gösta Berling, who lives a debaucherous life with an
+			unpredictable group of gentlemen at 'Sjö.' According to the historian and journalist Linus
+			Brodin, these characters are derived from a couple that lived at Öjervik. At the risk of
+			spoiling Lagerlöf's story, here's what happened to this colorful couple in real life, and
+			why Lagerlöf was compelled to tell their story.
+		</p>
+
+		<p>
+			The chief district judge, and in many cases the supreme judge, Jan Sandelin, lived at
+			Öjervik between 1786 and 1824. He lived there with his wife Gustafva Christina who had
+			inherited Öjervik. Öjervik had been the seat for local court affairs for centuries. One of
+			the annexes, which unfortunately no longer stands, was the local court in Fryksdalen.
+			According to legend, Gustafva Christina was beautiful and had many suitors. One of which,
+			Bengt Reinhold Antonsson, was so enamored by Gustafva Christina that when he died in 1814,
+			at age 51, unmarried, he willed his entire estate (including Rottneros) to Gustafva
+			Christina, making her the wealthiest woman in Värmland.
+		</p>
+
+		<p>
+			The size of her new estate and the audacity of Antonsson's will made Sandelin mad with
+			suspicion, jealousy, and rage. He became so mad that he locked Gustafva Christina into a
+			bedroom in the north wing of Öjervik, where she remained for the next 10 years, until Jan
+			Sandelin passed away. What makes the story so eerie is that when Jan Sandelin died,
+			Gustafva Christina could (finally) leave her room — <em>but she didn't</em>. She stayed in
+			her room for an additional 18 years, never once leaving her quarters. She didn't even
+			leave her room in 1832 when her own daughter married Gustaf Nauclér, the following chief
+			district judge at Öjervik. Gustafva Christina died in 1842, after 28 years in her room in
+			the north wing at Öjervik. Two years later, in 1844, the manor house at Öjervik burned to
+			the ground. To this day locals at the farm say they've seen "Frua" (Eng: "wife"), as was
+			Gustafva Christina's nickname.
+		</p>
+
+		<p>
+			Selma Lagerlöf cites hearing this story from her house maid, "Racklitzan," who worked at
+			Öjervik in the early 1800s. Racklitzan came to the Lagerlöf household through Lagerlöf's
+			grandfather, Daniel Lagerlöf. D. Lagerlöf became Gustafva Christina's legal guardian in
+			1824, when she was officially deemed insane (when she didn't want to leave her room). The
+			crazy events that took place at Öjervik have, at least in part, become eternal through
+			Lagerlöf's stories.
+		</p>
+
+		<h2>The Land</h2>
+
+		<p>
+			"Öijerwiks" history goes as far back as the Bronze Age (1750–550 BCE), according to
+			archaeologists who have examined multiple grave sites on the property. Ancient burial
+			sites are spread across the property probably because of the tactical defensibility of
+			wide vistas and high ground. According to local lore it's said that "Öjer" is buried in
+			one of the mounds by lake Fryken. Öjer was the viking that supposedly conquered the Isle
+			of Man. It's easy to imagine that many special metals are buried just a few feet below the
+			ground at Öjervik.
+		</p>
+
+		<p>
+			Another source calls the farm "Eiwarswik," which beckons the thought, maybe the viking's
+			name was Eivar? A fairly common name among Swedish males. Or did the local dialect
+			pronounce Eivar as Öjer? It's hard to know given the rules of how to correctly spell words
+			first came about in the late 19th century, far after the names of places in Sweden were
+			established.
+		</p>
+
+		<p>
+			In the 1860s, Öjervik was provided with significant improvements through an owner
+			interested in landscape architecture, Zacharias Abelin. Abelin built a magnificent park
+			with statues and a variety of trees. Only traces of it remain today. In an excerpt from a
+			newspaper article from 1923, 10 years after the railway that cuts across the farm was
+			built, Brodin paints a picture of the farm that reflects how the family still feels today,
+			100 years after his article was published.
+		</p>
+
+		<div class="poem">
+			<p>
+				"The original park has been cut off by a new railway, but flowers still grow among
+				alders and oaks, down by the "viking's" grave. Small serpentine paths remind us of a
+				time when money cultures didn't coerce people, rather when we chored with fair and
+				wholesome values, when we also had a culture of which remnants we, subsequent children,
+				cherish as something precious and loved that we have once owned and lost."
+			</p>
+			<p>
+				SWE: "Den ursprungliga parken är nu sönderskuren av järnvägen, men nere vid 'vikingens'
+				gravkulle växer trädgårdsblomster bland enar och alar, små slingrande vägar minna om
+				tider då ej penningkulturen jäktade människorna utan de hade tid att syssla med reellare
+				värden och dessutom ägde en kultur, vars rester vi, senare tiders barn, glädjas åt som
+				åt något dyrbart och kärt vi ägt och förlorat."
+			</p>
+		</div>
+
+		<p>
+			The buildings and land at Öjervik give us a reason to remember and share these stories. We
+			hope these stories, of life at the farm, may reinstate more wholesome values in us and
+			provide precious moments that we may cherish for ourselves, together with family and
+			friends, and pass down to the coming generations.
+		</p>
+	</div>
+
+	<div class="section-image">
+		<img src="/images/history/painting_red_house.jpg" alt="Painting of the red farmhouse at Öjervik" />
+		<p class="caption">Erling Ärlingsson — Fryksdalen</p>
+	</div>
+
+	<p class="signature">
+		Mats Horn af Åminne<br />
+		Öjerviks gård<br />
+		November 5th, 2020
+	</p>
+
+	<section>
+		<a class="cta" href="https://airbnb.com/h/ojervikfarmhouse" target="_blank" rel="noopener">I'm ready. Take me there.</a>
+	</section>
+</Layout>

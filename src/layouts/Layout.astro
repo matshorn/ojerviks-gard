@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const {
+	title,
+	description = "A hidden treasure in Värmland, at the foothills of the Scandinavian mountains.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title} · Öjerviks gård</title>
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="logo" href="/">
+				<img src="/images/042_o_jerviks-ga_rd.webp" alt="Öjerviks gård" width="180" />
+			</a>
+			<nav>
+				<a href="/farm">Farm</a>
+				<a href="/activities">Activities</a>
+				<a href="/celebrate">Celebrate</a>
+				<a href="/history">History</a>
+				<a class="book" href="https://airbnb.com/h/ojervikfarmhouse" target="_blank" rel="noopener">Book</a>
+			</nav>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="site-footer">
+			<div>
+				<strong>Öjerviks gård</strong><br />
+				686 94 Rottneros
+			</div>
+			<div>
+				<a href="mailto:hej@ojerviksgard.se">hej@ojerviksgard.se</a>
+			</div>
+			<div class="footer-links">
+				<a href="https://matshorn.notion.site/Welcome-to-jervik-9e8ff9bb10aa4786b69551105c68d0aa" target="_blank" rel="noopener">Welcome Book</a>
+				<a href="https://matshorn.notion.site/Team-jervik-6fe64b59b9fa49e88b5bb5a9ff29338b" target="_blank" rel="noopener">Concierge</a>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+---
+interface Entry {
+	year: string;
+	note: string;
+}
+
+interface Props {
+	entries: Entry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<div class="ledger" id="ledger">
+	{entries.map((e) => (
+		<div class="ledger-entry">
+			<div class="ledger-year">{e.year}</div>
+			<div class="ledger-note" set:html={e.note} />
+		</div>
+	))}
+</div>
+
+<noscript>
+	<style>
+		.ledger-year, .ledger-note { opacity: 1 !important; transform: none !important; }
+	</style>
+</noscript>
+
+<script>
+	// display: contents on .ledger-entry means it has no layout box, so
+	// IntersectionObserver can never report it as intersecting — observe the
+	// year/note children directly instead, since those do have real boxes.
+	const io = new IntersectionObserver(
+		(entries) => {
+			for (const entry of entries) {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("is-visible");
+					io.unobserve(entry.target);
+				}
+			}
+		},
+		{ threshold: 0.2 },
+	);
+	document.querySelectorAll("#ledger .ledger-year, #ledger .ledger-note").forEach((el) => io.observe(el));
+</script>
